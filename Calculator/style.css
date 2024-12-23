@@ -1,0 +1,152 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #454545, #bbc3e7);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 410px;
+    transition: all 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+#display {
+    width: 90%;
+    height: 50px;
+    font-size: 32px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    background-color: #0a0a0a;
+    color: #fbf6f6;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 24px;
+    background-color: #1c10c5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 70px; /* Fixed width for all buttons */
+    height: 70px; /* Fixed height for all buttons */
+}
+
+.btn:hover {
+    background-color: #40d94a;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Specific styles for the History button */
+.btn-history {
+    background-color: #ae2af0; /* Distinct color for History button */
+    width: 70px; /* Wider than other buttons */
+    height: 70px; /* Same height as other buttons */
+}
+
+.btn-history:hover {
+    background-color: #bae619; /* Darker shade on hover */
+}
+
+.history {
+    margin-top: 20px;
+}
+
+.history h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.history h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.history ul {
+    list-style-type: none;
+ padding: 0;
+}
+
+.history li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
